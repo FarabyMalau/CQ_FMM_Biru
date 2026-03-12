@@ -21,6 +21,11 @@ namespace PraktikumADO
             InitializeComponent();
         }
 
+        private void Koneksi()
+        {
+            conn = new SqlConnection("Data Source=DZAKNERZ\\DATABASEABY;Initial Catalog=DBAkademikADO;Integrated Security=True");
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
