@@ -108,6 +108,14 @@ namespace PraktikumADO
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
+        private void btnUpdateSKS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+                cmd = new SqlCommand("UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'", conn);
+
         private void label1_Click(object sender, EventArgs e)
         {
 
