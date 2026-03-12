@@ -97,6 +97,11 @@ namespace PraktikumADO
 
         private void btnHitungDosen_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Koneksi();
+                conn.Open();
+                cmd = new SqlCommand("SELECT COUNT(*) FROM Dosen", conn);
 
         private void label1_Click(object sender, EventArgs e)
         {
