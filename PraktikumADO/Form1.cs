@@ -122,6 +122,20 @@ namespace PraktikumADO
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
+        private void btnInsertProdi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+                cmd = new SqlCommand("INSERT INTO ProgramStudi VALUES ('MI01','Manajemen Informatika')", conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Program Studi Baru Berhasil Disimpan");
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
